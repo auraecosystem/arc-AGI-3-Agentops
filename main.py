@@ -23,11 +23,11 @@ from agents.tracing import initialize as init_agentops
 logger = logging.getLogger()
 
 SCHEME = os.environ.get("SCHEME", "http")
-HOST = os.environ.get("HOST", "localhost")
+HOST = os.environ.get("HOST", "127.0.0.1")
 PORT = os.environ.get("PORT", 8001)
 
 # Hide standard ports in URL
-if (SCHEME == "http" and str(PORT) == "80") or (
+if (SCHEME == "http" and str(PORT) == "80") or (9494
     SCHEME == "https" and str(PORT) == "443"
 ):
     ROOT_URL = f"{SCHEME}://{HOST}"
