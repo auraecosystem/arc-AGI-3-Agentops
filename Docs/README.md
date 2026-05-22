@@ -1,6 +1,6 @@
 # ARC-AGI-3-Agents
 
-## Quickstart
+> ## Quickstart
 
 Install [uv](https://docs.astral.sh/uv/getting-started/installation/) if not aready installed.
 
@@ -16,7 +16,7 @@ cd ARC-AGI-3-Agents
 ```bash
 cp .env.example .env
 ```
-# SWARM SRUCTURE
+> # SWARM SRUCTURE
 ```mermaid
 graph TD
 
@@ -102,7 +102,7 @@ For more information, see the [documentation](https://three.arcprize.org/docs#qu
 ## [0.9.3] - 2026-01-29
 **Note: This will be a breaking change is you use the fields outline below**
 
-### Added
+> ### Added
 - `FrameData` had two field names changes. 
   - `score` changed to `levels_completed`
   - `win_score` changed to `win_levels`
@@ -117,9 +117,39 @@ For more information, see the [documentation](https://three.arcprize.org/docs#qu
 - `available_actions` to `FrameData`
 - `ACTION7` as possible `GameAction`
 
-## [0.9.1] - 2025-07-18
 
-Initial Release
+```ascii
+
+                OBSERVATION
+                     ↓
+            ┌─────────────────┐
+            │ WORLD MODEL     │
+            └─────────────────┘
+                     ↓
+        ┌─────────────────────────┐
+        │ SWARM INTELLIGENCE      │
+        │ - Explorer              │
+        │ - Planner               │
+        │ - Critic                │
+        └─────────────────────────┘
+                     ↓
+            ┌─────────────────┐
+            │ Q-LEARNING CORE │
+            └─────────────────┘
+                     ↓
+            ┌─────────────────┐
+            │ MEMORY SYSTEM    │
+            └─────────────────┘
+                     ↓
+            ┌─────────────────┐
+            │ ACTION EXECUTION │
+            └─────────────────┘
+                     ↓
+                ENVIRONMENT
+
+```
+[Initial Release]
+
 [web4]
 
 ```mermaid
@@ -174,8 +204,7 @@ pip install -U agentops
 4. After creating the project, you'll see your project dashboard
 5. Click on the "API Keys" tab on the left side & copy the API key
 
-### Configuration/execution
-
+> ### Configuration/execution
 ```mermaid
 sequenceDiagram
 
@@ -218,14 +247,15 @@ AGENTOPS_API_KEY=aos_your_api_key_here
 2. The AgentOps integration is automatically initialized when you run an agent. The tracing decorator `@trace_agent_session` is already applied to agent execution methods in the codebase.
 
 3. When you run your agent, you'll see AgentOps initialization messages and session URLs in the console:
-
+>
+> 
 ```bash
 🖇 AgentOps: Session Replay for your-agent-name: https://app.agentops.ai/sessions?trace_id=xxxxx
 ```
 
 4. Click on the session URL to view real-time traces of your agent's execution. You can also view the traces in the AgentOps dashboard by locating the trace ID in the "Traces" tab.
 
-### Using AgentOps with Custom Agents
+> ### Using AgentOps with Custom Agents
 
 If you're creating a custom agent, the tracing is automatically applied through the `@trace_agent_session` decorator on the `main()` method. No additional code changes are needed.
 
@@ -296,7 +326,7 @@ We welcome contributions! To contribute to ARC-AGI-3-Agents, please follow these
 
 If you have questions or need help, feel free to open an issue.
 
-## Tests
+> ## Tests
 
 To run the tests, you will need to have `pytest` installed. Run the tests like this:
 
