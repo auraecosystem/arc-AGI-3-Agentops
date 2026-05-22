@@ -1,42 +1,44 @@
-[arc-agi-solver]
-│
-├── core/
-│   ├── loader.py
-│   ├── grid.py
-│   ├── evaluator.py
-│
-├── agents/
-│   ├── planner.py
-│   ├── heuristic.py
-│   ├── search.py
-│   ├── verifier.py
-│
-├── engine/
-│   ├── orchestrator.py
-│   ├── registry.py
-│
-├── data/
-│   ├── sample_task.json
-│
-├── main.py
-└── requirements.txt
+graph TD
 
+%% =========================
+%% ARC-AGI SWARM SYSTEM
+%% =========================
 
-[arc-agi-solver]
-│
-├── core/
-├── agents/
-│   ├── heuristic.py
-│   ├── search.py
-│   ├── llm_agent.py        ← NEW
-│   ├── synth_agent.py      ← NEW
-│   ├── memory.py           ← NEW
-│
-├── swarm/
-│   ├── swarm_manager.py    ← NEW
-│   ├── voting.py          ← NEW
-│
-├── engine/
-│   ├── orchestrator.py    (upgraded)
-│
-├── main.py
+A[ARC Task Input] --> B[Loader / Parser]
+
+B --> C[Orchestrator]
+
+C --> D[Swarm Manager]
+
+%% Swarm branches
+D --> E1[Heuristic Agent]
+D --> E2[Search Agent]
+D --> E3[LLM Hypothesis Agent]
+D --> E4[Program Synthesis Agent]
+
+%% Memory system
+C --> M[Memory Bank]
+M --> E3
+M --> E2
+
+%% Candidate generation
+E1 --> F[Candidate Solutions]
+E2 --> F
+E3 --> F
+E4 --> F
+
+%% Voting system
+F --> V[Voting / Scoring Engine]
+
+V --> G[Best Candidate]
+
+%% Output
+G --> O[Final ARC Solution]
+
+%% Feedback loop
+G --> M
+G --> C
+
+%% Optional reinforcement loop
+V --> R[Evaluation Metrics]
+R --> C
