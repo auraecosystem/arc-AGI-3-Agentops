@@ -28,7 +28,28 @@ export ARC_API_KEY="your_api_key_here"
 ```bash
 uv run main.py --agent=random --game=ls20
 ```
+```mermaid
+graph TD
 
+A[Input Task] --> B[Execution]
+
+B --> C[Output Result]
+
+C --> D{Correct?}
+
+D -->|Yes| E[Store in Memory Bank]
+D -->|No| F[Adjust Strategy]
+
+E --> G[Pattern Library]
+G --> H[Future Retrieval]
+
+H --> I[Swarm Agents]
+
+I --> B
+
+F --> J[Retry with new strategies]
+J --> B
+```
 For more information, see the [documentation](https://three.arcprize.org/docs#quick-start) or the [tutorial video](https://youtu.be/xEVg9dcJMkw).
 
 ## Changelog
@@ -53,6 +74,33 @@ For more information, see the [documentation](https://three.arcprize.org/docs#qu
 ## [0.9.1] - 2025-07-18
 
 Initial Release
+[web4]
+
+```mermaid
+graph TD
+
+A[ARC Task Queue] --> B[Web4 Router Node]
+
+B --> C1[Node A - Heuristic Worker]
+B --> C2[Node B - Search Worker]
+B --> C3[Node C - LLM Worker]
+B --> C4[Node D - Synth Worker]
+
+C1 --> D[Local Results Pool]
+C2 --> D
+C3 --> D
+C4 --> D
+
+D --> E[Consensus Engine]
+
+E --> F[Verified Solution]
+
+F --> G[Blockchain Log / Proof Layer]
+
+G --> H[Shared Global Memory]
+
+H --> B
+```
 
 ## Observability (Optional)
 
@@ -80,7 +128,40 @@ pip install -U agentops
 4. After creating the project, you'll see your project dashboard
 5. Click on the "API Keys" tab on the left side & copy the API key
 
-### Configuration
+### Configuration/execution
+
+```mermaid
+sequenceDiagram
+
+participant Task as ARC Task
+participant Orchestrator
+participant Swarm
+participant Heuristic
+participant Search
+participant LLM
+participant Synth
+participant Voting
+
+Task->>Orchestrator: New problem
+Orchestrator->>Swarm: Distribute task
+
+par Heuristic run
+Swarm->>Heuristic: generate rules
+Heuristic-->>Swarm: candidates
+and Search run
+Swarm->>Search: explore transforms
+Search-->>Swarm: candidates
+and LLM run
+Swarm->>LLM: propose rules
+LLM-->>Swarm: hypotheses
+and Synthesis run
+Swarm->>Synth: execute rules
+Synth-->>Swarm: outputs
+end
+
+Swarm->>Voting: all candidates
+Voting->>Orchestrator: best solution
+```
 
 1. Add your AgentOps API key to your `.env` file:
 
@@ -102,7 +183,54 @@ AGENTOPS_API_KEY=aos_your_api_key_here
 
 If you're creating a custom agent, the tracing is automatically applied through the `@trace_agent_session` decorator on the `main()` method. No additional code changes are needed.
 
+```mermaid
+graph TD
+
+%% =========================
+%% ARC-AGI SWARM SYSTEM
+%% =========================
+
+A[ARC Task Input] --> B[Loader / Parser]
+
+B --> C[Orchestrator]
+
+C --> D[Swarm Manager]
+
+%% Swarm branches
+D --> E1[Heuristic Agent]
+D --> E2[Search Agent]
+D --> E3[LLM Hypothesis Agent]
+D --> E4[Program Synthesis Agent]
+
+%% Memory system
+C --> M[Memory Bank]
+M --> E3
+M --> E2
+
+%% Candidate generation
+E1 --> F[Candidate Solutions]
+E2 --> F
+E3 --> F
+E4 --> F
+
+%% Voting system
+F --> V[Voting / Scoring Engine]
+
+V --> G[Best Candidate]
+
+%% Output
+G --> O[Final ARC Solution]
+
+%% Feedback loop
+G --> M
+G --> C
+
+%% Optional reinforcement loop
+V --> R[Evaluation Metrics]
+R --> C
+```
 ## Contest Submission
+
 
 To submit your agent for the ARC-AGI-3 competition, please use this form: https://forms.gle/wMLZrEFGDh33DhzV9.
 
