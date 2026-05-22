@@ -1,4 +1,4 @@
-arc-agi-solver/
+[arc-agi-solver]
 │
 ├── core/
 │   ├── loader.py
@@ -20,3 +20,23 @@ arc-agi-solver/
 │
 ├── main.py
 └── requirements.txt
+
+
+[arc-agi-solver]
+│
+├── core/
+├── agents/
+│   ├── heuristic.py
+│   ├── search.py
+│   ├── llm_agent.py        ← NEW
+│   ├── synth_agent.py      ← NEW
+│   ├── memory.py           ← NEW
+│
+├── swarm/
+│   ├── swarm_manager.py    ← NEW
+│   ├── voting.py          ← NEW
+│
+├── engine/
+│   ├── orchestrator.py    (upgraded)
+│
+├── main.py
