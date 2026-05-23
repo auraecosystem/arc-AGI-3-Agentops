@@ -2,7 +2,7 @@
 > Fetch the complete documentation index at: https://docs.arcprize.org/llms.txt
 > Use this file to discover all available pages before exploring further.
 
-# Create ARC-AGI-3 Environment
+> # Create ARC-AGI-3 Environment
 
 > Building and adding a game to ARC-AGI-3 Environments
 
