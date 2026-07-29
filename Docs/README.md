@@ -241,7 +241,7 @@ Voting->>Orchestrator: best solution
 1. Add your AgentOps API key to your `.env` file:
 
 ```bash
-AGENTOPS_API_KEY=aos_your_api_key_here
+AGENTOPS_API_KEY=api 
 ```
 
 2. The AgentOps integration is automatically initialized when you run an agent. The tracing decorator `@trace_agent_session` is already applied to agent execution methods in the codebase.
@@ -317,12 +317,12 @@ We welcome contributions! To contribute to ARC-AGI-3-Agents, please follow these
 1.  Fork the repository and create a new branch for your feature or bugfix.
 2.  Make your changes and ensure that all tests pass, you are welcome to add more tests for your specific fixes.
 3.  This project uses `ruff` for linting and formatting. Please set up the pre-commit hooks to ensure your contributions match the project's style.
-    ```shell
+   ```bash
     pip install pre-commit
     pre-commit install
-    ```
-4.  Write clear commit messages describing your changes.
-5.  Open a pull request with a description of your changes and the motivation behind them.
+   ```
+5.  Write clear commit messages describing your changes.
+6.  Open a pull request with a description of your changes and the motivation behind them.
 
 If you have questions or need help, feel free to open an issue.
 
