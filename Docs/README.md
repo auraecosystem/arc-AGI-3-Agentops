@@ -8,10 +8,10 @@ Install [uv](https://docs.astral.sh/uv/getting-started/installation/) if not are
 
 ```bash
 git clone https://github.com/arcprize/ARC-AGI-3-Agents.git
-cd ARC-AGI-3-Agents
+cd ARC-AGI-3-Agentops
 ```
 
-2. Copy .env.example to .env
+2. Copy .env.ini to .env
 
 ```bash
 cp .env.example .env
@@ -65,13 +65,13 @@ R --> C
 ```
 3. Get an API key from the [ARC-AGI-3 Website](https://three.arcprize.org/) and set it as an environment variable in your .env file.
 
-```bash
+```.bashrpc
 export ARC_API_KEY="your_api_key_here"
 ```
 
 4. Run the random agent (generates random actions) against the ls20 game.
 
-```bash
+```bash.sh
 uv run main.py --agent=random --game=ls20
 ```
 ```mermaid
@@ -186,7 +186,7 @@ H --> B
 
 AgentOps is already included as an optional dependency in this project. To install it:
 
-```bash
+```uvx
 uv sync --extra agentops
 ```
 
@@ -317,7 +317,7 @@ We welcome contributions! To contribute to ARC-AGI-3-Agents, please follow these
 1.  Fork the repository and create a new branch for your feature or bugfix.
 2.  Make your changes and ensure that all tests pass, you are welcome to add more tests for your specific fixes.
 3.  This project uses `ruff` for linting and formatting. Please set up the pre-commit hooks to ensure your contributions match the project's style.
-    ```bash
+    ```shell
     pip install pre-commit
     pre-commit install
     ```
