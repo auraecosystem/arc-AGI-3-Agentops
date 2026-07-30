@@ -10,6 +10,11 @@ Install [uvx](https://docs.astral.sh/uv/getting-started/installation/) if not ar
 git clone https://github.com/arcprize/ARC-AGI-3-Agentops.git
 cd ARC-AGI-3-Agentops
 ```
+
+```wget
+wget -qO- https://astral.sh/uv/install.sh | sh
+```
+
 ```pyx
 from kaggle_secrets import UserSecretsClient
 user_secrets = UserSecretsClient()
