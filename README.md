@@ -1,3 +1,10 @@
+>
+````index.html
+
+<iframe src="https://www.kaggle.com/embed/auraecosystem/arc-agi-3-duck-balanced-ternary-10d-int4sp-v6?kernelSessionId=341336440" height="800" style="margin: 0 auto; width: 100%; max-width: 950px;" frameborder="0" scrolling="auto" title="Arc Agi 3 Duck Balanced Ternary 10d Int4sp V6" ><iframe\>
+
+
+````
 # ARC-AGI-3-Agents
 
 > ## Quickstart
@@ -7,7 +14,7 @@ Install [uvx](https://docs.astral.sh/uv/getting-started/installation/) if not ar
 1. Clone the ARC-AGI-3-Agents repo and enter the directory.
 
 ```bash
-git clone https://github.com/arcprize/ARC-AGI-3-Agentops.git
+git clone https://github.com/auraecosystem/ARC-AGI-3-Agentops.git
 cd ARC-AGI-3-Agentops
 ```
 
@@ -337,12 +344,9 @@ We welcome contributions! To contribute to ARC-AGI-3-Agents, please follow these
    ```
 
 [auraecosystem/arc-agi-3-duck-balanced-ternary-10d-int4sp-v6](https://www.kaggle.com/code/auraecosystem/arc-agi-3-duck-balanced-ternary-10d-int4sp-v6?kernelSessionId=341336440)
-
-
 ```inded.html
 
 <iframe src="https://www.kaggle.com/embed/auraecosystem/arc-agi-3-duck-balanced-ternary-10d-int4sp-v6?kernelSessionId=341336440" height="800" style="margin: 0 auto; width: 100%; max-width: 950px;" frameborder="0" scrolling="auto" title="Arc Agi 3 Duck Balanced Ternary 10d Int4sp V6"></iframe>
-
 ```
 5.  Write clear commit messages describing your changes.
 6.  Open a pull request with a description of your changes and the motivation behind them.
