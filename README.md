@@ -18,6 +18,10 @@ git clone https://github.com/auraecosystem/ARC-AGI-3-Agentops.git
 cd ARC-AGI-3-Agentops
 ```
 
+```python
+kaggle competitions submit -c arc-prize-2026-paper-track -f submission.csv -k auraecosystem/<NOTEBOOK> -v <VERSION> -m "Message"
+```
+
 ```bash
 wget -qO- https://astral.sh/uv/install.sh | sh
 ```
