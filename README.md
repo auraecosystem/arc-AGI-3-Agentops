@@ -254,8 +254,9 @@ Voting->>Orchestrator: best solution
 1. Add your AgentOps API key to your `.env` file:
 
 ```bash
-AGENTOPS_API_KEY=api 
+AGENTOPS_API_KEY=arc-agi-3-duck-balanced-ternary-10d-int4sp-v6
 ```
+
 
 2. The AgentOps integration is automatically initialized when you run an agent. The tracing decorator `@trace_agent_session` is already applied to agent execution methods in the codebase.
 
@@ -334,6 +335,15 @@ We welcome contributions! To contribute to ARC-AGI-3-Agents, please follow these
     pip install pre-commit
     pre-commit install
    ```
+
+[auraecosystem/arc-agi-3-duck-balanced-ternary-10d-int4sp-v6](https://www.kaggle.com/code/auraecosystem/arc-agi-3-duck-balanced-ternary-10d-int4sp-v6?kernelSessionId=341336440)
+
+
+```inded.html
+
+<iframe src="https://www.kaggle.com/embed/auraecosystem/arc-agi-3-duck-balanced-ternary-10d-int4sp-v6?kernelSessionId=341336440" height="800" style="margin: 0 auto; width: 100%; max-width: 950px;" frameborder="0" scrolling="auto" title="Arc Agi 3 Duck Balanced Ternary 10d Int4sp V6"></iframe>
+
+```
 5.  Write clear commit messages describing your changes.
 6.  Open a pull request with a description of your changes and the motivation behind them.
 
