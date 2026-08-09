@@ -18,7 +18,7 @@ git clone https://github.com/auraecosystem/ARC-AGI-3-Agentops.git
 cd ARC-AGI-3-Agentops
 ```
 
-```python
+```bash
 kaggle competitions submit -c arc-prize-2026-paper-track -f submission.csv -k auraecosystem/<NOTEBOOK> -v <VERSION> -m "Message"
 ```
 
@@ -26,7 +26,7 @@ kaggle competitions submit -c arc-prize-2026-paper-track -f submission.csv -k au
 wget -qO- https://astral.sh/uv/install.sh | sh
 ```
 
-```pyi
+```python
 from kaggle_secrets import UserSecretsClient
 user_secrets = UserSecretsClient()
 secret_value_0 = user_secrets.get_secret("Api")
