@@ -218,6 +218,7 @@ Or if you're installing manually:
 
 ```bash
 pip install -U agentops
+kaggle kernels pull auraecosystem/modelhai-parque
 ```
 
 ### Getting Your API Key
