@@ -211,13 +211,13 @@ H --> B
 
 AgentOps is already included as an optional dependency in this project. To install it:
 
-```uvx
+```bash
 uv sync --extra agentops
 ```
 
 Or if you're installing manually:
 
-```bash
+```uv
 pip install -U agentops
 kaggle kernels pull auraecosystem/modelhai-parque
 gcloud auth configure-docker \
@@ -261,7 +261,6 @@ and Synthesis run
 Swarm->>Synth: execute rules
 Synth-->>Swarm: outputs
 end
-
 Swarm->>Voting: all candidates
 Voting->>Orchestrator: best solution
 ```
@@ -269,7 +268,7 @@ Voting->>Orchestrator: best solution
 1. Add your AgentOps API key to your `.env` file:
 
 ```bash
-AGENTOPS_API_KEY=6611b1a63a0952268a3f44fdb724c1f2/arc-agi-3-duck-balanced-ternary-10d-int4sp-v6
+AGENTOPS_API_KEY=“6611b1a63a0952268a3f44fdb724c1f2/arc-agi-3-duck-balanced-ternary-10d-int4sp-v6”
 ```
 
 [physionet](https://www.kaggle.com/code/bjoernjostein/physionet-challenge-utility-script?cellIds=1&kernelSessionId=68680130)
