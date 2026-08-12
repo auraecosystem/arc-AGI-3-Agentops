@@ -21,3 +21,5 @@ video_client = videointelligence.VideoIntelligenceServiceClient()
 # Cloud Vision
 from google.cloud import vision
 client = vision.ImageAnnotatorClient()
+gcloud auth configure-docker \
+    us-docker.pkg.dev
