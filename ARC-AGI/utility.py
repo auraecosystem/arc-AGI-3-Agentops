@@ -24,7 +24,10 @@ from scipy.signal import butter, lfilter, filtfilt
 from scipy.signal import find_peaks
 from scipy.signal import peak_widths
 from scipy.signal import savgol_filter
+from kaggle_secrets import UserSecretsClient
 
+# Retrieve the secret value using the label you defined
+secret_value = UserSecretsClient().get_secret("6611b1a63a0952268a3f44fdb724c1f2")
 
 
 def load_challenge_data(filename):
