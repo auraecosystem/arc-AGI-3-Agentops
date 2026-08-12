@@ -266,10 +266,11 @@ Voting->>Orchestrator: best solution
 1. Add your AgentOps API key to your `.env` file:
 
 ```bash
-AGENTOPS_API_KEY=arc-agi-3-duck-balanced-ternary-10d-int4sp-v6
+AGENTOPS_API_KEY=6611b1a63a0952268a3f44fdb724c1f2
+arc-agi-3-duck-balanced-ternary-10d-int4sp-v6
 ```
 
-
+[physionet](https://www.kaggle.com/code/bjoernjostein/physionet-challenge-utility-script?cellIds=1&kernelSessionId=68680130)
 2. The AgentOps integration is automatically initialized when you run an agent. The tracing decorator `@trace_agent_session` is already applied to agent execution methods in the codebase.
 
 3. When you run your agent, you'll see AgentOps initialization messages and session URLs in the console:
