@@ -1,10 +1,10 @@
 >
-````index.html
+```index.html
 
 <iframe src="https://www.kaggle.com/embed/auraecosystem/arc-agi-3-duck-balanced-ternary-10d-int4sp-v6?kernelSessionId=341336440" height="800" style="margin: 0 auto; width: 100%; max-width: 950px;" frameborder="0" scrolling="auto" title="Arc Agi 3 Duck Balanced Ternary 10d Int4sp V6" ><iframe\>
 
 
-````
+```
 # ARC-AGI-3-Agents
 
 > ## Quickstart
@@ -22,7 +22,7 @@ cd ARC-AGI-3-Agentops
 kaggle competitions submit -c arc-prize-2026-paper-track -f submission.csv -k auraecosystem/<NOTEBOOK> -v <VERSION> -m "Message"
 ```
 
-```bash
+```shell
 wget -qO- https://astral.sh/uv/install.sh | sh
 ```
 
@@ -266,8 +266,7 @@ Voting->>Orchestrator: best solution
 1. Add your AgentOps API key to your `.env` file:
 
 ```bash
-AGENTOPS_API_KEY=6611b1a63a0952268a3f44fdb724c1f2
-arc-agi-3-duck-balanced-ternary-10d-int4sp-v6
+AGENTOPS_API_KEY=6611b1a63a0952268a3f44fdb724c1f2/arc-agi-3-duck-balanced-ternary-10d-int4sp-v6
 ```
 
 [physionet](https://www.kaggle.com/code/bjoernjostein/physionet-challenge-utility-script?cellIds=1&kernelSessionId=68680130)
