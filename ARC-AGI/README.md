@@ -277,6 +277,7 @@ If you'd like to see a 100-step run on your game, play the game with the [Sample
 ## Complete Code
 
 <Accordion title="Full ab12.py source code">
+  
   ```python theme={null}
   import random
 
