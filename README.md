@@ -35,8 +35,9 @@ secret_value_0 = user_secrets.get_secret("Api")
 
 2. Copy .env.ini to .env
 
-```bash
+```uv
 cp .env.example .env
+kaggle kernels output auraecosystem/auraecosystem-modelhai-parque -p /path/to/dest
 ```
 > # SWARM SRUCTURE
 ```mermaid
