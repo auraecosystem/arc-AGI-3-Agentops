@@ -220,6 +220,8 @@ Or if you're installing manually:
 ```bash
 pip install -U agentops
 kaggle kernels pull auraecosystem/modelhai-parque
+gcloud auth configure-docker \
+    us-docker.pkg.dev
 ```
 
 ### Getting Your API Key
