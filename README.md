@@ -12,17 +12,39 @@
 Install [uvx](https://docs.astral.sh/uv/getting-started/installation/) if not aready installed.
 
 1. Clone the ARC-AGI-3-Agents repo and enter the directory.
+```env
+export ARC_API_KEY="6611b1a63a0952268a3f44fdb724c1f2"
+```
+
+4. Run the random agent (generates random actions) against the ls20 game.
+
+```bash
+uv run main.py --agent=random --game=ls20
+```
+```bash
+uv pip install agentops litellm
+```
+
+
+```python
+import agentops
+
+agentops.init(
+    api_key='6c4f8831-9386-4619-a79e-b342d339a733',
+    default_tags=['litellm']
+)
+```
 
 ```bash
 git clone https://github.com/auraecosystem/ARC-AGI-3-Agentops.git
 cd ARC-AGI-3-Agentops
 ```
 
-```bash
+```ini
 kaggle competitions submit -c arc-prize-2026-paper-track -f submission.csv -k auraecosystem/<NOTEBOOK> -v <VERSION> -m "Message"
 ```
 
-```shell
+```ps1
 wget -qO- https://astral.sh/uv/install.sh | sh
 kaggle kernels pull bjoernjostein/physionet-challenge-utility-script
 ```
