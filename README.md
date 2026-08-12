@@ -24,6 +24,7 @@ kaggle competitions submit -c arc-prize-2026-paper-track -f submission.csv -k au
 
 ```shell
 wget -qO- https://astral.sh/uv/install.sh | sh
+kaggle kernels pull bjoernjostein/physionet-challenge-utility-script
 ```
 
 ```python
